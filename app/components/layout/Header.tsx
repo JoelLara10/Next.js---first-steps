@@ -1,6 +1,7 @@
 import Link from "next/link";
+import Navigation from "../../utils/Navigation";
 
-function HeaderPage () {
+export default function Header() {
     return (
         <header className="flex w-full flex-wrap items-center justify-between gap-x-6 gap-y-4 border-b border-zinc-200 pb-5 dark:border-zinc-800">
             <Link
@@ -16,48 +17,14 @@ function HeaderPage () {
                     role="img"
                     aria-label="UTVT"
                 >
-                    <path
-                        d="M8 13H18L23 39L28 13H37L30 50H17L8 13Z"
-                        fill="#00843D"
-                    />
-
-                    <path
-                        d="M26 13H37L42 37L47 13H57L49 50H36L32 31L28 50H18L26 13Z"
-                        fill="#005A32"
-                    />
-
-                    <path
-                        d="M18 8H47"
-                        stroke="#00843D"
-                        strokeWidth="5"
-                        strokeLinecap="square"
-                    />
+                    <path d="M8 13H18L23 39L28 13H37L30 50H17L8 13Z" fill="#00843D" />
+                    <path d="M26 13H37L42 37L47 13H57L49 50H36L32 31L28 50H18L26 13Z" fill="#005A32" />
+                    <path d="M18 8H47" stroke="#00843D" strokeWidth="5" strokeLinecap="square" />
                 </svg>
                 <span>UTVT</span>
             </Link>
 
-            <nav aria-label="Navegacion principal" className="order-3 w-full sm:order-0 sm:w-auto">
-                <ul className="flex items-center gap-5 overflow-x-auto text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                    <li>
-                        <Link href="/carrera">
-                            Mi carrera
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/about">
-                            Acerca de
-                        </Link>
-                    </li>
-
-                    <li>
-                        <Link href="/blog">
-                            Blog
-                        </Link>
-                    </li>
-
-                    <li><a className="whitespace-nowrap transition-colors hover:text-cyan-600 dark:hover:text-cyan-400" href="https://nextjs.org/docs/app/getting-started/project-structure">Next.js</a></li>
-                </ul>
-            </nav>
+            <Navigation />
 
             <div className="flex items-center gap-2">
                 <a
@@ -73,4 +40,3 @@ function HeaderPage () {
         </header>
     );
 }
-export default HeaderPage;
